@@ -13,7 +13,7 @@ export default function PortfolioSection() {
 
     return (
 
-        <div className="flex flex-wrap w-full h-screen bg-black  px-[20%] justify-center  py-[10%]">
+        <div className="flex flex-wrap w-full  bg-black  px-[20%] justify-center  py-[10%]">
             {
                 showSwiper ?
                     <>

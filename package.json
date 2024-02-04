@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/react-scroll": "^1.8.10",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-scroll": "^1.9.0",
     "swiper": "^11.0.5",
     "tailwindcss-animated": "^1.0.1",
     "use-dencrypt-effect": "^2.0.0"

@@ -17,7 +17,7 @@ export default function AboutMeSection() {
                     <div className="flex flex-col justify-center items-center ml-[-4%] ">
                         <div className="bg-black rounded-full h-56 w-56  bg-profile-pic bg-cover bg-center shadow-2xl shadow-black " />
                         <h1 className=" text-5xl  text-white mt-8 ml-[-4%] " >Pongsathorn Lawang</h1>
-                        <p className=" text-sm text-5D-gray mt-4">
+                        <p className=" text-sm text-white mt-4 opacity-80">
                             Hello there, I'm Ron, seeking a full-time position in application  development <br /> where I can further develop my skills  and grow professionally.
                         </p>
                     </div>
@@ -44,7 +44,7 @@ export default function AboutMeSection() {
 
 
                     </div>
-                    <button className="  bg-black rounded-full  shadow-2xl mt-9 p-4  shadow-black hover:opacity-80 duration-300" >Contact Me</button>
+                    <button className="  bg-black rounded-full  shadow-2xl mt-9 p-4  shadow-black hover:translate-y-2 hover:duration-700 duration-700" >Contact Me</button>
 
                 </div>
 
