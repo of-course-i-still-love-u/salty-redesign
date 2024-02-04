@@ -44,7 +44,7 @@ export default function AboutMeSection() {
 
 
                     </div>
-                    <button className="  bg-black rounded-full  shadow-2xl mt-9 p-4  shadow-black" >Contact Me</button>
+                    <button className="  bg-black rounded-full  shadow-2xl mt-9 p-4  shadow-black hover:opacity-80 duration-300" >Contact Me</button>
 
                 </div>
 

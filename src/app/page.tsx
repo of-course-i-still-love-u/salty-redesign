@@ -6,9 +6,9 @@ import PortfolioSection from '@/components/portfolioSection/portfolioSection'
 export default function Page() {
   return (
     <div className=" bg-white">
-      {/* <CoverSection />
+      <CoverSection />
       <AboutMeSection/>
-      <ExperiencesSection/> */}
+      <ExperiencesSection/>
       <PortfolioSection/>
       
 
