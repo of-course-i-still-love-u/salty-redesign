@@ -16,6 +16,13 @@ export default function Page() {
   const divPort = useRef<HTMLInputElement | null>(null);
   const divContact = useRef<HTMLInputElement | null>(null);
 
+  useEffect(() => {
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
+
   const scrolLWithUseRef = (menu: string): any => {
     switch (menu) {
       case "Home":
@@ -42,11 +49,11 @@ export default function Page() {
   return (
     <div className=" bg-white">
       <NavigationBar refMenu={(o) => scrolLWithUseRef(o)} />
-      <div ref={divCover}  >
+      <div ref={divCover} id='Cover' >
         <CoverSection />
       </div>
       <div ref={divAbout}>
-        <AboutMeSection />
+        <AboutMeSection refMenu={(o) => scrolLWithUseRef(o)} />
       </div>
       <div ref={divExp}>
         <ExperiencesSection />
@@ -54,7 +61,7 @@ export default function Page() {
       <div ref={divPort}>
         <PortfolioSection />
       </div>
-      <div ref={divContact}>
+      <div ref={divContact} id='Contact'>
         <ContactMeSection />
       </div>
       <CreditSection refMenu={(o) => scrolLWithUseRef(o)} />

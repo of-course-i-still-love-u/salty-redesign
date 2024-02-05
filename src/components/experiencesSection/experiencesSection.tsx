@@ -2,6 +2,8 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { motion, Variants } from "framer-motion"
+
 
 
 
@@ -13,14 +15,29 @@ export default function ExperiencesSection() {
     const [jackCCardHover, setJackCCardHover] = useState(false)
     const [jackSCardHover, setJackSCardHover] = useState(false)
 
-
+    const boxVariants: Variants = {
+        offscreen: {
+            y: 1000
+        },
+        onscreen: {
+            y: 0,
+            transition: {
+                type: "spring",
+                bounce: 0.1,
+                duration: 2
+            }
+        }
+    };
 
 
     return (
-        <div className="w-full h-screen bg-exp-bg bg-cover  bg-no-repeat flex items-center px-[5%]">
-
-            <div className="flex w-full justify-between items-center  ">
-
+        <motion.div
+            className="w-full h-screen bg-exp-bg bg-cover  bg-no-repeat flex items-center px-[5%]"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
+        >
+            <motion.div className="flex w-full justify-between items-center" variants={boxVariants}>
                 <div className=" flex justify-center items-center w-[15rem] h-[20rem] bg-exp-q-bg bg-contain bg-center bg-no-repeat">
                     {queenCardHover ?
                         <div onMouseLeave={() => setQueenCardHover(false)} className="bg-black w-[182px] h-[262px] rounded-xl p-4  hover:animate-fade hover:duration-700 ">
@@ -35,7 +52,9 @@ export default function ExperiencesSection() {
                             alt="queen-card"
                             width="192"
                             height="272"
-                        />}
+                        />
+
+                    }
                 </div>
 
                 <div className=" flex justify-center items-center w-[15rem] h-[20rem] bg-exp-jc-bg bg-contain bg-center bg-no-repeat">
@@ -90,8 +109,7 @@ export default function ExperiencesSection() {
                             height="272"
                         />}
                 </div>
-            </div>
-
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }

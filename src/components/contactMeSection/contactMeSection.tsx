@@ -3,14 +3,42 @@
 import Image from "next/image"
 import { contactIcon } from "@/utils/constantData"
 import { useEffect } from "react"
+import { motion, Variants } from "framer-motion"
+
 
 
 export default function ContactMeSection() {
     const email = '<lw.pongsathorn@gmail.com/>'
 
+    const setVariants = (index: number): Variants => {
+        const boxVariants: Variants = {
+            offscreen: {
+                y: 1000
+            },
+            onscreen: {
+                y: 0,
+                transition: {
+                    type: "spring",
+                    bounce: 0.1,
+                    duration: index * 1.5
+                }
+            }
+        };
+
+        return boxVariants
+
+    }
+
     return (
-        <div className="w-full h-screen  px-[10%] py-[2%] flex ">
-            <div className=" flex-1  flex">
+
+        <motion.div
+            className="w-full h-screen  px-[10%] py-[2%] flex "
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
+        >
+            <motion.div className=" flex-1  flex" variants={setVariants(1)}>
+
                 <Image
                     className="w-auto h-auto "
                     src="/img/handOfGod.svg"
@@ -18,33 +46,44 @@ export default function ContactMeSection() {
                     width="450"
                     alt="bg-contactMe"
                 />
-
-            </div>
+            </motion.div>
             <div className=" flex-1 flex-col flex justify-center">
                 <h1 className="text-6xl text-black">
-                    Get in touch
+                    <motion.div className="" variants={setVariants(1)}>
+                        Get in touch
+                    </motion.div>
                 </h1>
                 <h1 className="text-6xl text-black mt-4">
-                    Let’s work together
+                    <motion.div className="" variants={setVariants(2)}>
+                        Let’s work together
+                    </motion.div>
                 </h1>
                 <div className="flex items-end mt-4">
                     <h1 className="mr-8 text-6xl text-black" >
-                        Email
+                        <motion.div className="" variants={setVariants(3)}>
+                            Email
+                        </motion.div>
                     </h1>
-                    <a href="mailto:lw.pongsathorn@gmail.com" className=" text-2xl text-black  underline "> {email}  </a>
+                    <a href="mailto:lw.pongsathorn@gmail.com" className=" text-2xl text-black  underline ">
+                        <motion.div className="" variants={setVariants(3)}>
+                            {email}
+                        </motion.div>
+                    </a>
                 </div>
                 <div className=" flex  mt-8 ">
                     {contactIcon.map((item, index) => {
                         return (
-                            <a href={item.link}>
-                                <Image
-                                    className={"pr-8 hover:translate-y-2  hover:duration-700  duration-700"}
-                                    src={item.img}
-                                    alt="contact-icon"
-                                    width="90"
-                                    height="90"
+                            <a href={item.link} key={index}>
+                                <motion.div className="" variants={setVariants(4)}>
+                                    <Image
+                                        className={"pr-8 hover:translate-y-2  hover:duration-700  duration-700"}
+                                        src={item.img}
+                                        alt="contact-icon"
+                                        width="90"
+                                        height="90"
 
-                                />
+                                    />
+                                </motion.div>
                             </a>
                         )
                     })}
@@ -53,6 +92,6 @@ export default function ContactMeSection() {
                 </div>
 
             </div>
-        </div>
+        </motion.div>
     )
 }

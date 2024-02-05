@@ -23,7 +23,7 @@ export default function NavigationBar({ refMenu }: NavProps) {
                 {
                     navBarMenu.map((item, index) => {
                         return (
-                            <li onClick={() => { refMenu(item) }} className="  text-base  font-extralight hover:bg-black hover:text-white hover:rounded-full  px-4 py-1  duration-700 text-[#5D5D5D] mr-4 cursor-pointer" >{item}</li>
+                            <li key={index} onClick={() => { refMenu(item) }} className="  text-base  font-extralight hover:bg-black hover:text-white hover:rounded-full  px-4 py-1  duration-700 text-[#5D5D5D] mr-4 cursor-pointer" >{item}</li>
                         )
                     })
                 }

@@ -56,9 +56,9 @@ export default function SwiperComp({ index }: PortFolioProps) {
         >
             {cardData.map((item, index) => {
                 return (
-                    <SwiperSlide className=' pl-[35%] '>
+                    <SwiperSlide key={index} className=' pl-[35%] '>
                         <Image
-                            className=' rounded-xl'
+                            className='w-auto h-auto rounded-xl'
                             src={item}
                             alt="ss"
                             width="288"
