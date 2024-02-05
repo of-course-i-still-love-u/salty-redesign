@@ -4,7 +4,7 @@ import { useDencrypt } from "use-dencrypt-effect"
 
 
 
-export default function dencryptEffect(wordingList: string[]): string {
+export default function DencryptEffect(wordingList: string[]): string {
     const [value, setValue] = useDencrypt(wordingList[0]);
 
 

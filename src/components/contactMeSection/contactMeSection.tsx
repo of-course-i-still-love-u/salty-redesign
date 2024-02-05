@@ -20,7 +20,7 @@ export default function ContactMeSection() {
                 transition: {
                     type: "spring",
                     bounce: 0.1,
-                    duration: index * 1.5
+                    duration: index * 1.2
                 }
             }
         };

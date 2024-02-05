@@ -58,12 +58,11 @@ export default function SwiperComp({ index }: PortFolioProps) {
                 return (
                     <SwiperSlide key={index} className=' pl-[35%] '>
                         <Image
-                            className='w-auto h-auto rounded-xl'
+                            className=' rounded-xl'
                             src={item}
                             alt="ss"
                             width="288"
                             height="640"
-                        // fill
                         />
                     </SwiperSlide>
                 )

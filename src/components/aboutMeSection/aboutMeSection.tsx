@@ -41,7 +41,7 @@ export default function AboutMeSection({ refMenu }: NavProps) {
 
                         <h1 className=" text-5xl  text-white mt-8 ml-[-4%] " >Pongsathorn Lawang</h1>
                         <p className=" text-sm text-white mt-4 opacity-80">
-                            Hello there, I'm Ron, seeking a full-time position in application  development <br /> where I can further develop my skills  and grow professionally.
+                            {`Hello there, I'm Ron, seeking a full-time position in application  development`} <br /> where I can further develop my skills  and grow professionally.
                         </p>
                     </motion.div>
                 </div>
