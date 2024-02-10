@@ -1,7 +1,8 @@
 'use client'
 import Image from "next/image"
 import { bundleIcon } from "@/utils/constantData"
-import { motion, Variants } from "framer-motion"
+import { useInView } from "framer-motion"
+import { useRef } from "react";
 
 interface NavProps {
     refMenu(refMenu: string): string;
@@ -9,32 +10,28 @@ interface NavProps {
 
 export default function AboutMeSection({ refMenu }: NavProps) {
 
-    const boxVariants: Variants = {
-        offscreen: {
-            y: 1000
-        },
-        onscreen: {
-            y: 0,
-            transition: {
-                type: "spring",
-                bounce: 0.1,
-                duration: 2
-            }
+    const ref = useRef<HTMLInputElement | null>(null);
+    const isInView = useInView(ref, { once: true });
+
+    const setAnimation = (item: Number) => {
+        const actionAn = {
+            transform: isInView ? "none" : "translateY(150px)",
+            opacity: isInView ? 1 : 0,
+            transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${item}s`
         }
-    };
+        return actionAn
+
+
+    }
 
 
     return (
-        <div className="flex-col w-full justify-center align-middle h-screen  px-[8%] my-[8%] " >
-            <motion.div
+        <div  ref={ref}  className="flex-col w-full justify-center align-middle h-screen  px-[8%] my-[8%] " >
+            <div
                 className="flex  w-full mt-16 "
-                initial="offscreen"
-                whileInView="onscreen"
-                viewport={{ once: true }}
             >
-
                 <div className="w-[60%] h-screen bg-profile-bg bg-no-repeat bg-cover bg-center flex justify-center  ">
-                    <motion.div className="flex flex-col justify-center items-center ml-[-4%]" variants={boxVariants}>
+                    <div className="flex flex-col justify-center items-center ml-[-4%]" style={setAnimation(0.2)}>
                         <div
                             className="bg-black rounded-full h-56 w-56  bg-profile-pic bg-cover bg-center shadow-2xl shadow-black"
                         />
@@ -43,9 +40,9 @@ export default function AboutMeSection({ refMenu }: NavProps) {
                         <p className=" text-sm text-white mt-4 opacity-80">
                             {`Hello there, I'm Ron, seeking a full-time position in application  development`} <br /> where I can further develop my skills  and grow professionally.
                         </p>
-                    </motion.div>
+                    </div>
                 </div>
-                <motion.div className="flex-col w-[40%]  justify-center flex" variants={boxVariants}>
+                <div className="flex-col w-[40%]  justify-center flex" style={setAnimation(0.2)}>
                     <h1 className=" text-6xl text-black" >Skills & Tools</h1>
                     <div className=" flex  flex-wrap mt-4  ">
                         {bundleIcon.map((item, index) => {
@@ -66,9 +63,9 @@ export default function AboutMeSection({ refMenu }: NavProps) {
 
                     </div>
                     <button onClick={(() => refMenu("Contact"))} className="  bg-black rounded-full  shadow-2xl mt-9 p-4  hover:shadow-black hover:duration-700 duration-700" >Contact Me</button>
-                </motion.div>
+                </div>
 
-            </motion.div>
+            </div>
         </div >
     )
 }

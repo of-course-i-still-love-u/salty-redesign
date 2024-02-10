@@ -49,7 +49,7 @@ export default function Page() {
   return (
     <div className=" bg-white">
       <NavigationBar refMenu={(o) => scrolLWithUseRef(o)} />
-      <div ref={divCover} id='Cover' >
+      <div ref={divCover}  >
         <CoverSection />
       </div>
       <div ref={divAbout}>
@@ -61,7 +61,7 @@ export default function Page() {
       <div ref={divPort}>
         <PortfolioSection />
       </div>
-      <div ref={divContact} id='Contact'>
+      <div ref={divContact} >
         <ContactMeSection />
       </div>
       <CreditSection refMenu={(o) => scrolLWithUseRef(o)} />

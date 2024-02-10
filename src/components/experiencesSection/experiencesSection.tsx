@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from "react"
+import { useRef, useState } from "react"
 import Image from "next/image"
-import { motion, Variants } from "framer-motion"
+import { useInView } from "framer-motion"
 
 
 
@@ -15,29 +15,28 @@ export default function ExperiencesSection() {
     const [jackCCardHover, setJackCCardHover] = useState(false)
     const [jackSCardHover, setJackSCardHover] = useState(false)
 
-    const boxVariants: Variants = {
-        offscreen: {
-            y: 1000
-        },
-        onscreen: {
-            y: 0,
-            transition: {
-                type: "spring",
-                bounce: 0.1,
-                duration: 2
-            }
+    const ref = useRef<HTMLInputElement | null>(null);
+    const isInView = useInView(ref, { once: true });
+
+    const setAnimation = (item: Number) => {
+        const actionAn = {
+            transform: isInView ? "none" : "translateX(-250px) rotate(360deg)",
+            opacity: isInView ? 1 : 0,
+            transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${item}s`
         }
-    };
+        return actionAn
+
+
+    }
 
 
     return (
-        <motion.div
+        <div
+            ref={ref}
             className="w-full h-screen bg-exp-bg bg-cover  bg-no-repeat flex items-center px-[5%]"
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true }}
+
         >
-            <motion.div className="flex w-full justify-between items-center" variants={boxVariants}>
+            <div className="flex w-full justify-between items-center" >
                 <div className=" flex justify-center items-center w-[15rem] h-[20rem] bg-exp-q-bg bg-contain bg-center bg-no-repeat">
                     {queenCardHover ?
                         <div onMouseLeave={() => setQueenCardHover(false)} className="bg-black w-[182px] h-[262px] rounded-xl p-4  hover:animate-fade hover:duration-700 ">
@@ -52,6 +51,7 @@ export default function ExperiencesSection() {
                             alt="queen-card"
                             width="192"
                             height="272"
+                            style={setAnimation(0.2)}
                         />
 
                     }
@@ -71,6 +71,7 @@ export default function ExperiencesSection() {
                             alt="jack-club-card"
                             width="192"
                             height="272"
+                            style={setAnimation(0.4)}
                         />}
                 </div>
 
@@ -89,6 +90,7 @@ export default function ExperiencesSection() {
                             alt="jack-spade-card"
                             width="192"
                             height="272"
+                            style={setAnimation(0.6)}
                         />}
                 </div>
 
@@ -107,9 +109,10 @@ export default function ExperiencesSection() {
                             alt="king-card"
                             width="192"
                             height="272"
+                            style={setAnimation(0.8)}
                         />}
                 </div>
-            </motion.div>
-        </motion.div>
+            </div>
+        </div>
     )
 }
