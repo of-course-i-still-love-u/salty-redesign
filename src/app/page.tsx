@@ -15,7 +15,7 @@ export default function Page() {
   const divExp = useRef<HTMLInputElement | null>(null);
   const divPort = useRef<HTMLInputElement | null>(null);
   const divContact = useRef<HTMLInputElement | null>(null);
-
+  
   useEffect(() => {
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);

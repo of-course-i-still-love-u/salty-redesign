@@ -54,8 +54,6 @@ export default function AboutMeSection({ refMenu }: NavProps) {
                                     alt="skills-icon"
                                     width="70"
                                     height="70"
-
-
                                 />
                             )
                         })}

@@ -2,7 +2,7 @@
 
 export const wording = ['Mobile Dev', 'Web Dev']
 
-export const bundleIcon = ['/img/javascript-icon.svg', '/img/typescript-icon.svg', '/img/nextjs-icon.svg', '/img/react-icon.svg', '/img/redux-icon.svg', '/img/nodejs-icon.svg', '/img/kotlin-icon.svg', '/img/android-icon.svg', '/img/google-play-icon.svg', '/img/app-store-icon.svg', '/img/git-icon.svg', '/img/firebase-icon.svg', '/img/docker-icon.svg', '/img/postman-icon.svg', '/img/figma-icon.svg', '/img/jira-icon.svg']
+export const bundleIcon = ['/img/nextjs-icon.svg', '/img/react-icon.svg', '/img/redux-icon.svg', '/img/nodejs-icon.svg','/img/javascript-icon.svg', '/img/typescript-icon.svg','/img/html-icon.svg','/img/css-icon.svg','/img/tailwind-icon.svg', '/img/kotlin-icon.svg', '/img/android-icon.svg', '/img/google-play-icon.svg','/img/android-studio-icon.png','/img/xcode-icon.png', '/img/app-store-icon.svg', '/img/git-icon.svg', '/img/firebase-icon.svg', '/img/docker-icon.svg', '/img/postman-icon.svg', '/img/figma-icon.svg', '/img/jira-icon.svg']
 export const contactIcon = [{ img: "/img/email-icon.svg", link: "mailto:lw.pongsathorn@gmail.com" }, { img: '/img/git-icon.svg', link: "https://github.com/of-course-i-still-love-u" }, { img: '/img/ig-icon.svg', link: "https://www.instagram.com/_0xsurvive/" }, { img: '/img/spotify-icon.svg', link: "https://open.spotify.com/playlist/4NIhOEf8aiwpYKzAUYkNJf?si=zn9l3NqoQ96P0dUDOPP6lA&nd=1&dlsi=08299eb1898641ed" }]
 
 
