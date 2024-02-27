@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'profile-pic': "url('/img/profile-pic.svg')",
-        'profile-bg': "url('/img/profile-bg.svg')",
+        'profile-bg': "url('/img/profile-bg.png')",
         'exp-bg': "url('/img/exp-bg.svg')",
         'exp-q-bg': "url('/img/queen-bg.svg')",
         'exp-jc-bg': "url('/img/jack-club-bg.svg')",
@@ -39,8 +39,22 @@ const config: Config = {
       },
       colors: {
         '5D-gray': '#858585',
+        'x-color': '#FAA',
       },
 
+    },
+    screens: {
+      'phone' : '320px',
+      // => @media (min-width: 320px) { ... }
+
+      'tablet': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'laptop': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'desktop': '1280px',
+      // => @media (min-width: 1280px) { ... }
     },
   },
   plugins: [

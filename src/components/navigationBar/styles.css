@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .xLogo {
+    @apply w-[70px] h-[50px];
+  }
+  .xNav {
+    @apply flex justify-between  items-center w-full px-[10%] pt-[2%];
+  }
+  .xNav-ul {
+    @apply flex;
+  }
+  .xNav-li {
+    @apply text-base  font-extralight hover:bg-black hover:text-white hover:rounded-full  px-4 py-1  duration-700 text-[#5D5D5D] mr-4 cursor-pointer;
+  }
+  .xNav-li-hide {
+    @apply inline
+  }
+  .xNav-icon {
+    @apply h-12 w-12 bg-[url('/img/nav-mobile-menu-icon.svg')] bg-contain bg-center bg-no-repeat hidden;
+  }
+
+  /* mobile and tablet displays */
+  @media screen and (max-width: 1279px) {
+    .xLogo {
+      @apply w-[40px] h-[50px] z-[100];
+    }
+    .xNav-icon {
+      @apply inline;
+    }
+    .xNav-ul {
+      @apply flex-col items-end z-[99] absolute right-0 top-2 pr-5 bg-white w-full;
+    }
+    .xNav-li {
+      @apply mr-0 px-0 py-4 text-xl hover:text-black hover:bg-transparent hover:font-bold;
+    }
+    .xNav-li-hide {
+      @apply hidden 
+    }
+  }
+  
+}

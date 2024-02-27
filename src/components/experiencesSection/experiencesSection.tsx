@@ -3,6 +3,7 @@
 import { useRef, useState } from "react"
 import Image from "next/image"
 import { useInView } from "framer-motion"
+import './styles.css'
 
 
 
@@ -33,11 +34,10 @@ export default function ExperiencesSection() {
     return (
         <div
             ref={ref}
-            className="w-full h-screen bg-exp-bg bg-cover  bg-no-repeat flex items-center px-[5%]"
-
+            className="qContainer"
         >
-            <div className="flex w-full justify-between items-center" >
-                <div className=" flex justify-center items-center w-[15rem] h-[20rem] bg-exp-q-bg bg-contain bg-center bg-no-repeat">
+            <div className="qWrapper">
+                <div className=" flex justify-center items-center my-8  w-[15rem] h-[20rem] bg-exp-q-bg bg-contain bg-center bg-no-repeat">
                     {queenCardHover ?
                         <div onMouseLeave={() => setQueenCardHover(false)} className="bg-black w-[182px] h-[262px] rounded-xl p-4  hover:animate-fade hover:duration-700 ">
                             <h1 className="text-2xl">Bachelor in <br />
@@ -57,7 +57,7 @@ export default function ExperiencesSection() {
                     }
                 </div>
 
-                <div className=" flex justify-center items-center w-[15rem] h-[20rem] bg-exp-jc-bg bg-contain bg-center bg-no-repeat">
+                <div className=" flex justify-center items-center my-8 w-[15rem] h-[20rem] bg-exp-jc-bg bg-contain bg-center bg-no-repeat">
                     {jackCCardHover ?
                         <div onMouseLeave={() => setJackCCardHover(false)} className="bg-black w-[182px] h-[262px] rounded-xl p-4 hover:animate-fade hover:duration-700  ">
                             <h1 className="text-2xl">NOC<br />
@@ -76,7 +76,7 @@ export default function ExperiencesSection() {
                 </div>
 
 
-                <div className=" flex justify-center items-center w-[15rem] h-[20rem] bg-exp-js-bg bg-contain bg-center bg-no-repeat">
+                <div className=" flex justify-center items-center my-8 w-[15rem] h-[20rem] bg-exp-js-bg bg-contain bg-center bg-no-repeat">
                     {jackSCardHover ?
                         <div onMouseLeave={() => setJackSCardHover(false)} className="bg-black w-[182px] h-[262px] rounded-xl p-4  hover:animate-fade hover:duration-700 ">
                             <h1 className="text-2xl">Mobile<br />
@@ -94,7 +94,7 @@ export default function ExperiencesSection() {
                         />}
                 </div>
 
-                <div className=" flex justify-center items-center w-[15rem] h-[20rem] bg-exp-k-bg bg-contain bg-center bg-no-repeat">
+                <div className=" flex justify-center items-center my-8 w-[15rem] h-[20rem] bg-exp-k-bg bg-contain bg-center bg-no-repeat">
                     {kingCardHover ?
                         <div onMouseLeave={() => setKingCardHover(false)} className="bg-black w-[182px] h-[262px] rounded-xl p-4  hover:animate-fade hover:duration-700 ">
                             <h1 className="text-2xl">Senior<br />

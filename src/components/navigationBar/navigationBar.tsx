@@ -1,6 +1,8 @@
 'use client'
 import { navBarMenu } from "@/utils/constantData"
 import Image from "next/image"
+import './styles.css'
+import { useEffect, useState } from "react";
 
 
 
@@ -9,21 +11,23 @@ interface NavProps {
 }
 
 export default function NavigationBar({ refMenu }: NavProps) {
+    const [showNavMobile, setShowNavMobile] = useState(false)
 
     return (
-        <div className="flex justify-between  items-center w-full px-[10%] pt-[2%]">
+        <div className="xNav">
             <Image
-                className=""
+                className="xLogo"
                 src="/img/logo-black-icon.svg"
                 width="70"
                 height="50"
                 alt="logo-icon"
             />
-            <ul className="flex">
+            <ul className="xNav-ul">
+                <button className="xNav-icon" onClick={() => setShowNavMobile(!showNavMobile)} />
                 {
                     navBarMenu.map((item, index) => {
                         return (
-                            <li key={index} onClick={() => { refMenu(item) }} className="  text-base  font-extralight hover:bg-black hover:text-white hover:rounded-full  px-4 py-1  duration-700 text-[#5D5D5D] mr-4 cursor-pointer" >{item}</li>
+                            <li key={index} onClick={() => { refMenu(item) }} className={`${showNavMobile ? 'xNav-li' : 'xNav-li-hide '} xNav-li`} >{item}</li>
                         )
                     })
                 }

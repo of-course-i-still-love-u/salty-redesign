@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .qContainer {
+    @apply w-full h-screen bg-exp-bg bg-cover  bg-no-repeat flex items-center px-[5%]
+  }
+  .qWrapper {
+    @apply flex w-full justify-between items-center;
+  }
+
+  /* mobile displays  */
+  @media (min-width: 320px) {
+    .qWrapper{
+        @apply max-[1279px]:flex-col
+    }
+    .qContainer{
+        @apply max-[1279px]:h-full
+    }
+  }
+
+  @media (min-width: 430px) {
+  }
+
+  /* tablet displays  */
+  @media (min-width: 601px) {
+  }
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1024px) {
+  }
+
+  /* desktop displays */
+  @media (min-width: 1280px) {
+  }
+  @media (min-width: 1536px) {
+  }
+}

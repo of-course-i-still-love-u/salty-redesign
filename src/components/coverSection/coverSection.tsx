@@ -5,6 +5,8 @@ import { mechsuit } from "../../app/fonts"
 import { hypik } from "../../app/fonts"
 import { wording } from "@/utils/constantData"
 import DencryptEffect from "@/utils/dencryptEffect"
+import "./styles.css"
+
 
 
 
@@ -16,23 +18,21 @@ export default function CoverSection() {
 
 
     return (
-        <div className="flex w-full justify-center align-middle h-screen pt-10" >
-            <div className="flex-col w-full">
-                <h1 className={`${psyche.className} text-black 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-3xl  sm:text-2xl  text-center m-4`}>PongsathornL</h1>
-                <h1 className={`${mechsuit.className} text-black 2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl sm:text-4xl  m-4 text-center`}>{DencryptEffect(wording)}</h1>
-                <h1 className={`${hypik.className} 2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl sm:text-4xl text-center m-4 mt-8 drop-shadow-[0_0.5px_0.5px_rgba(0,0,0,1)] `}>Developer</h1>
+        <div className="xContainer" >
+            <div className="flex-col w-full ">
+                <h1 className={`${psyche.className} xText-line-1`}>PongsathornL</h1>
+                <h1 className={`${mechsuit.className} xText-line-2`}>{DencryptEffect(wording)}</h1>
+                <h1 className={`${hypik.className} xText-line-3`}>Developer</h1>
             </div>
-            <div className="w-5 h-5 rounded-full bg-black absolute top-[70vh] right-[20vw] animate-pulse animate-infinite animate-duration-1000 animate-ease-linear"  />
-            <div className="w-4 h-4 rounded-full bg-black absolute top-[90vh] left-[20vw] animate-pulse animate-infinite animate-duration-1000 animate-ease-linear"  />
+            <div className="xDot-1" />
+            <div className="xDot-2" />
             <Image
-                className="absolute top-20 w-2/4 animate-fade "
+                className="xBg-cover"
                 src="/img/bg-cover.svg"
                 alt="bg-cover"
                 width="500"
                 height="500"
             />
-
-
         </div>
     )
 }

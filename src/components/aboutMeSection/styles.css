@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .zContainer {
+    @apply w-full h-screen  px-[10vw] my-[10vh];
+  }
+  .zWrapper {
+    @apply flex w-full mt-16;
+  }
+  .zLeftBox {
+    @apply w-[50vw] h-screen bg-profile-bg bg-no-repeat bg-contain bg-center flex justify-center;
+  }
+
+  .zLeftBoxItem {
+    @apply flex flex-col justify-center items-center ml-[-4%];
+  }
+  .zProfilePic {
+    @apply rounded-full h-40 w-40  bg-profile-pic bg-cover bg-center bg-no-repeat shadow-2xl shadow-black;
+  }
+
+  .zNameText {
+    @apply text-5xl  text-white mt-8 ml-[-4%] inline;
+  }
+  .zNameTextM {
+    @apply text-5xl  text-black mt-8  inline;
+  }
+  .zDetailM {
+    @apply text-sm text-black mt-4 opacity-80 inline;
+  }
+  .zDetail {
+    @apply text-sm text-white mt-4 opacity-80 inline;
+  }
+  .zRightBox {
+    @apply flex-col w-[30vw]  justify-center flex;
+  }
+  .zSkillText {
+    @apply text-6xl text-black;
+  }
+  .zSkillIcon {
+    @apply flex  flex-wrap mt-4;
+  }
+
+  /* mobile displays  */
+  @media (min-width: 320px) {
+    .zContainer {
+      @apply max-[1279px]:h-full;
+    }
+    .zWrapper {
+      @apply max-[1279px]:flex-col max-[1279px]:justify-center max-[1279px]:items-center;
+    }
+
+    .zProfilePic {
+      @apply max-[429px]:h-36 max-[429px]:w-36;
+    }
+    .zLeftBox {
+      @apply max-[1279px]:w-[90vw] max-[429px]:h-[50vh];
+    }
+
+    .zNameText {
+      @apply max-[1279px]:hidden;
+    }
+    .zDetail {
+      @apply max-[1279px]:hidden;
+    }
+
+    .zRightBox {
+      @apply max-[1279px]:w-[85vw] max-[1279px]:mt-20;
+    }
+
+    .zSkillText {
+      @apply max-[1279px]:text-5xl;
+    }
+
+    .zSkillIcon {
+      @apply max-[1279px]:justify-center;
+    }
+  }
+
+  @media (min-width: 430px) {
+    .zLeftBox {
+     @apply   max-[1279px]:h-[45vh]
+    }
+  }
+
+  /* tablet displays  */
+  @media (min-width: 601px) {
+  }
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1024px) {
+  }
+
+  /* desktop displays */
+  @media (min-width: 1280px) {
+    .zNameTextM {
+      @apply hidden;
+    }
+    .zDetailM {
+      @apply hidden;
+    }
+    .zLeftBox{
+        /* @apply bg-cover */
+    }
+  }
+  @media (min-width: 1536px) {
+    .zNameTextM {
+        @apply hidden;
+      }
+      .zDetailM {
+        @apply hidden;
+      }
+
+      .zProfilePic {
+        @apply  h-52 w-52
+      }
+  }
+}

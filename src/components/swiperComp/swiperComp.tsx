@@ -52,11 +52,11 @@ export default function SwiperComp({ index }: PortFolioProps) {
             grabCursor={true}
             // pagination={{ clickable: true }}
             modules={[EffectCards, Pagination]}
-            className=" w-[100%] h-[45rem]  mt-[10%] animate-jump animate-duration-500 animate-ease-in "
+            className="w-[100%] h-[45rem]  mt-[10%] animate-jump animate-duration-500 animate-ease-in "
         >
             {cardData.map((item, index) => {
                 return (
-                    <SwiperSlide key={index} className=' pl-[35%] '>
+                    <SwiperSlide key={index} className='max-[1279px]:pl-[15vw] pl-[20vw] '>
                         <Image
                             className=' rounded-xl'
                             src={item}

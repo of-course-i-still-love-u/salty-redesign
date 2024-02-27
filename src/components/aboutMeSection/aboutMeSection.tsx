@@ -3,6 +3,7 @@ import Image from "next/image"
 import { bundleIcon } from "@/utils/constantData"
 import { useInView } from "framer-motion"
 import { useRef } from "react";
+import './styles.css'
 
 interface NavProps {
     refMenu(refMenu: string): string;
@@ -26,25 +27,33 @@ export default function AboutMeSection({ refMenu }: NavProps) {
 
 
     return (
-        <div  ref={ref}  className="flex-col w-full justify-center align-middle h-screen  px-[8%] my-[8%] " >
+        <div ref={ref} className="zContainer" >
             <div
-                className="flex  w-full mt-16 "
+                className="zWrapper"
             >
-                <div className="w-[60%] h-screen bg-profile-bg bg-no-repeat bg-cover bg-center flex justify-center  ">
-                    <div className="flex flex-col justify-center items-center ml-[-4%]" style={setAnimation(0.2)}>
+
+                <div className="zLeftBox">
+                    <div className="zLeftBoxItem" style={setAnimation(0.2)}>
                         <div
-                            className="bg-black rounded-full h-56 w-56  bg-profile-pic bg-cover bg-center shadow-2xl shadow-black"
+                            className="zProfilePic"
                         />
 
-                        <h1 className=" text-5xl  text-white mt-8 ml-[-4%] " >Pongsathorn Lawang</h1>
-                        <p className=" text-sm text-white mt-4 opacity-80">
+                        <h1 className="zNameText" >Pongsathorn Lawang</h1>
+                        <p className="zDetail">
                             {`Hello there, I'm Ron, seeking a full-time position in application  development`} <br /> where I can further develop my skills  and grow professionally.
                         </p>
                     </div>
                 </div>
-                <div className="flex-col w-[40%]  justify-center flex" style={setAnimation(0.2)}>
-                    <h1 className=" text-6xl text-black" >Skills & Tools</h1>
-                    <div className=" flex  flex-wrap mt-4  ">
+
+                    <h1 className="zNameTextM" style={setAnimation(0.4)} >Pongsathorn Lawang</h1>
+                    <p className="zDetailM" style={setAnimation(0.6)}>
+                        {`Hello there, I'm Ron, seeking a full-time position in application  development`} <br /> where I can further develop my skills  and grow professionally.
+                    </p>
+
+
+                <div className="zRightBox" style={setAnimation(0.2)}>
+                    <h1 className="zSkillText" >Skills & Tools</h1>
+                    <div className="zSkillIcon" >
                         {bundleIcon.map((item, index) => {
                             return (
                                 <Image

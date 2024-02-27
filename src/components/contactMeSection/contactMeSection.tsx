@@ -24,10 +24,10 @@ export default function ContactMeSection() {
     }
 
     return (
-        <div ref={ref} className="w-full h-screen  px-[10%] py-[2%] flex">
-            <div className=" flex-1  flex" style={setAnimation(0.2)}>
+        <div ref={ref} className="w-full max-[1279px]:h-full h-screen  px-[10%] max-[1279px]:py-[20%] py-[2%] flex max-[1279px]:flex-col-reverse">
+            <div className="max-[1279px]:mt-[10%] flex-1  flex" style={setAnimation(0.2)}>
                 <Image
-                    className="w-auto h-auto "
+                    className="w-auto h-auto  "
                     src="/img/handOfGod.svg"
                     height="550"
                     width="450"
@@ -35,33 +35,33 @@ export default function ContactMeSection() {
                 />
             </div>
             <div className=" flex-1 flex-col flex justify-center">
-                <h1 className="text-6xl text-black" style={setAnimation(0.2)}>
+                <h1 className="max-[1279px]:text-5xl text-6xl text-black" style={setAnimation(0.2)}>
 
                     Get in touch
 
                 </h1>
-                <h1 className="text-6xl text-black mt-4" style={setAnimation(0.4)}>
+                <h1 className="max-[1279px]:text-5xl text-6xl text-black mt-4" style={setAnimation(0.4)}>
 
                     Let’s work together
 
                 </h1>
-                <div className="flex items-end mt-4" style={setAnimation(0.6)} >
-                    <h1 className="mr-8 text-6xl text-black" >
+                <div className="max-[1279px]:flex-col flex max-[1279px]:items-start items-end max-[1279px]:mt-0 mt-4" style={setAnimation(0.6)} >
+                    <h1 className=" mr-8 max-[1279px]:text-5xl text-6xl text-black max-[1279px]:mt-4" >
 
                         Email
 
                     </h1>
-                    <a href="mailto:lw.pongsathorn@gmail.com" className=" text-2xl text-black  underlin " >
+                    <a href="mailto:lw.pongsathorn@gmail.com" className="max-[1279px]:text-xl text-2xl  text-black  underlin " >
                         {email}
                     </a>
                 </div>
-                <div className=" flex  mt-8 " style={setAnimation(0.8)}>
+                <div className="flex  mt-8" style={setAnimation(0.8)}>
                     {contactIcon.map((item, index) => {
                         return (
                             <a href={item.link} key={index} >
 
                                 <Image
-                                    className={"pr-8 hover:translate-y-2  hover:duration-700  duration-700"}
+                                    className={"max-[1279px]:px-4 pr-8 hover:translate-y-2  hover:duration-700  duration-700"}
                                     src={item.img}
                                     alt="contact-icon"
                                     width="90"

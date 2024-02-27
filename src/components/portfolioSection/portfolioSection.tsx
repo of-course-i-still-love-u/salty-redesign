@@ -28,13 +28,13 @@ export default function PortfolioSection() {
     return (
         <div
             ref={ref}
-            className="flex flex-wrap w-full  bg-black  px-[20%] justify-center  py-[10%]"
+            className="flex flex-wrap w-full  bg-black  max-[1279px]:px-[0%] px-[20%] justify-center  py-[10%]"
 
         >
             {
                 showSwiper ?
                     <>
-                        <div className="flex justify-end w-full">
+                        <div className="flex max-[1279px]:pr-10 justify-end w-full">
                             <button className=" h-10 w-10 bg-[url('/img/x-icon.svg')] bg-contain bg-center bg-no-repeat shadow-2xl  shadow-black rounded-full "
                                 onClick={() => { setShowSwiper(false) }}
                             />
@@ -43,12 +43,12 @@ export default function PortfolioSection() {
                     </>
                     :
                     <>
-                        <div className="flex-col mr-[5%]" >
+                        <div className=" max-[1279px]:mr-0 mr-[5%] " >
                             {portfolioCard.map((item, index) => {
                                 return (
                                     index < 2 ?
                                         <div key={index} style={setAnimation(0.7)} >
-                                            <div className={`flex items-end w-[400px] ${index % 2 == 0 ? 'h-[400px]' : 'h-[600px]'} my-5 bg-white rounded-3xl ${index == 0 ? 'bg-port-sw-bg' : 'bg-port-valo-bg'} bg-no-repeat hover:-translate-y-1 hover:scale-110  duration-300 bg-cover bg-center cursor-pointer`}
+                                            <div className={`flex items-end max-[1279px]:w-[320px] w-[400px] ${index % 2 == 0 ? 'h-[400px]' : 'h-[600px]'} my-5 bg-white rounded-3xl ${index == 0 ? 'bg-port-sw-bg' : 'bg-port-valo-bg'} bg-no-repeat hover:-translate-y-1 hover:scale-110  duration-300 bg-cover bg-center cursor-pointer`}
                                                 onClick={() => { setShowSwiper(true), setProjectIndex(index) }}
                                             >
                                                 <div className="flex flex-col  justify-end  bg-gradient-to-t from-black h-[50%] w-full p-5 pb-10 ">
@@ -58,9 +58,9 @@ export default function PortfolioSection() {
                                                     </h1>
                                                     <div className="flex justify-between items-end">
                                                         <h1 className=" text-2xl flex  items-center justify-between  mr-2 ">
-                                                            {item.title} {item.year}
+                                                            {item.title}  <br />{item.year}
                                                         </h1>
-                                                        <div className=" bg-[url('/img/click-icon.svg')] h-10 w-10 bg-contain bg-center bg-no-repeat shadow-2xl  shadow-black rounded-full" />
+                                                        <div className=" bg-[url('/img/click-icon.svg')] max-[1279px]:h-15 h-10 max-[1279px]:w-15 w-10 bg-contain bg-center bg-no-repeat shadow-2xl  shadow-black rounded-full" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -70,12 +70,12 @@ export default function PortfolioSection() {
                             })
                             }
                         </div>
-                        <div className="flex-col">
+                        <div className="">
                             {portfolioCard.map((item, index) => {
                                 return (
                                     index > 1 ?
                                         <div key={index} style={setAnimation(1.2)}>
-                                            <div className={`flex items-end w-[400px] ${index % 2 == 0 ? 'h-[600px]' : 'h-[400px]'} my-5 bg-white rounded-3xl ${index == 2 ? 'bg-port-meta-bg' : 'bg-port-spo-bg'} bg-no-repeat hover:-translate-y-1 hover:scale-110  duration-300 bg-cover bg-center cursor-pointer`}
+                                            <div className={`flex items-end max-[1279px]:w-[320px] w-[400px] ${index % 2 == 0 ? 'h-[600px]' : 'h-[400px]'} my-5 bg-white rounded-3xl ${index == 2 ? 'bg-port-meta-bg' : 'bg-port-spo-bg'} bg-no-repeat hover:-translate-y-1 hover:scale-110  duration-300 bg-cover bg-center cursor-pointer`}
                                                 onClick={() => { setShowSwiper(true), setProjectIndex(index) }}
                                             >
                                                 <div className="flex flex-col  justify-end  bg-gradient-to-t from-black h-[50%] w-full p-5 pb-10 ">
@@ -85,9 +85,9 @@ export default function PortfolioSection() {
                                                     </h1>
                                                     <div className="flex justify-between items-end">
                                                         <h1 className=" text-2xl flex  items-center justify-between  mr-2 ">
-                                                            {item.title} {item.year}
+                                                            {item.title}  <br />{item.year}
                                                         </h1>
-                                                        <div className=" bg-[url('/img/click-icon.svg')] h-10 w-10 bg-contain bg-center bg-no-repeat shadow-2xl  shadow-black rounded-full" />
+                                                        <div className=" bg-[url('/img/click-icon.svg')] max-[1279px]:h-15 h-10 max-[1279px]:w-15 w-10 bg-contain bg-center bg-no-repeat shadow-2xl  shadow-black rounded-full" />
                                                     </div>
                                                 </div>
                                             </div>
