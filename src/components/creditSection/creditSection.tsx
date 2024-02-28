@@ -37,9 +37,9 @@ export default function CreditSection({ refMenu }: NavProps) {
                 </ul>
                 <div className="max-[1279px]:hidden h-[2px]  bg-white w-[80%]  mt-10 " />
                 <ul className="max-[1279px]:flex-col flex max-[1279px]:justify-center justify-between items-center w-full px-[10%] max-[1279px]:mt-[5%] mt-[1%]">
-                    <li className="max-[1279px]:text-base text-lg  font-extralight">Privacy Policy</li>
-                    <li className="max-[1279px]:text-base text-lg  font-extralight max-[1279px]:mt-[5%]  max-[1279px]:text-center">© 2024 All rights reserved. – Designed & Coded by Pongsathorn L</li>
-                    <a href="https://salty-portfolio.web.app/" className="max-[1279px]:text-base text-lg  font-extralight">© 2022 salty-portfolio.web.app</a>
+                    <li className="max-[1279px]:text-base text-lg  font-extralight text-white">Privacy Policy</li>
+                    <li className="max-[1279px]:text-base text-lg  font-extralight max-[1279px]:mt-[5%]  max-[1279px]:text-center text-white">© 2024 All rights reserved. – Designed & Coded by Pongsathorn L</li>
+                    <a href="https://salty-portfolio.web.app/" className="max-[1279px]:text-base text-lg  font-extralight text-white">© 2022 salty-portfolio.web.app</a>
                 </ul>
 
             </div>

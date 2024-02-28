@@ -43,7 +43,7 @@ export default function PortfolioSection() {
                     </>
                     :
                     <>
-                        <div className=" max-[1279px]:mr-0 mr-[5%] " >
+                        <div className=" max-[1279px]:mr-0 mr-[5%]" >
                             {portfolioCard.map((item, index) => {
                                 return (
                                     index < 2 ?
@@ -52,12 +52,12 @@ export default function PortfolioSection() {
                                                 onClick={() => { setShowSwiper(true), setProjectIndex(index) }}
                                             >
                                                 <div className="flex flex-col  justify-end  bg-gradient-to-t from-black h-[50%] w-full p-5 pb-10 ">
-                                                    <h1 className=" text-sm ">
+                                                    <h1 className=" text-sm text-white ">
                                                         {item.type}
                                                         <br />
                                                     </h1>
                                                     <div className="flex justify-between items-end">
-                                                        <h1 className=" text-2xl flex  items-center justify-between  mr-2 ">
+                                                        <h1 className="text-white text-2xl flex  items-center justify-between  mr-2 ">
                                                             {item.title}  <br />{item.year}
                                                         </h1>
                                                         <div className=" bg-[url('/img/click-icon.svg')] max-[1279px]:h-15 h-10 max-[1279px]:w-15 w-10 bg-contain bg-center bg-no-repeat shadow-2xl  shadow-black rounded-full" />
@@ -79,12 +79,12 @@ export default function PortfolioSection() {
                                                 onClick={() => { setShowSwiper(true), setProjectIndex(index) }}
                                             >
                                                 <div className="flex flex-col  justify-end  bg-gradient-to-t from-black h-[50%] w-full p-5 pb-10 ">
-                                                    <h1 className=" text-sm ">
+                                                    <h1 className="text-white text-sm ">
                                                         {item.type}
                                                         <br />
                                                     </h1>
                                                     <div className="flex justify-between items-end">
-                                                        <h1 className=" text-2xl flex  items-center justify-between  mr-2 ">
+                                                        <h1 className="text-white text-2xl flex  items-center justify-between  mr-2 ">
                                                             {item.title}  <br />{item.year}
                                                         </h1>
                                                         <div className=" bg-[url('/img/click-icon.svg')] max-[1279px]:h-15 h-10 max-[1279px]:w-15 w-10 bg-contain bg-center bg-no-repeat shadow-2xl  shadow-black rounded-full" />

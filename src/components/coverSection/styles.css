@@ -13,7 +13,7 @@
     @apply text-black text-center m-4;
   }
   .xText-line-3 {
-    @apply text-center m-4 mt-8 drop-shadow-[0_0.5px_0.5px_rgba(0,0,0,1)];
+    @apply text-center m-4 mt-8 drop-shadow-[0_0.5px_0.5px_rgba(0,0,0,1)] text-white;
   }
   .xDot-1 {
     @apply w-5 h-5 rounded-full bg-black absolute top-[70vh] right-[20vw] animate-pulse animate-infinite animate-duration-1000 animate-ease-linear;
@@ -37,7 +37,7 @@
       @apply text-[1.7rem] max-[600px]:leading-3;
     }
     .xText-line-3 {
-      @apply text-4xl max-[1279px]:drop-shadow-[0_0.5px_1.5px_rgba(0,0,0,1)] max-[600px]:leading-5;
+      @apply text-4xl max-[1279px]:drop-shadow-[0_0.5px_1.5px_rgba(0,0,0,1)] max-[600px]:leading-5 ;
     }
     .xBg-cover {
       @apply max-[600px]:top-[15vh] max-[600px]:w-[650px] max-[600px]:h-[650px];

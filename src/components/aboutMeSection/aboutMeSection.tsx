@@ -69,7 +69,7 @@ export default function AboutMeSection({ refMenu }: NavProps) {
 
 
                     </div>
-                    <button onClick={(() => refMenu("Contact"))} className="  bg-black rounded-full  shadow-2xl mt-9 p-4  hover:shadow-black hover:duration-700 duration-700" >Contact Me</button>
+                    <button onClick={(() => refMenu("Contact"))} className="text-white  bg-black rounded-full  shadow-2xl mt-9 p-4  hover:shadow-black hover:duration-700 duration-700" >Contact Me</button>
                 </div>
 
             </div>
