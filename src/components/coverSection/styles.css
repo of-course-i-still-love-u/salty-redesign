@@ -34,10 +34,10 @@
       @apply text-xl 
     }
     .xText-line-2 {
-      @apply text-3xl max-[600px]:leading-3;
+      @apply text-[1.7rem] max-[600px]:leading-3;
     }
     .xText-line-3 {
-      @apply text-4xl 
+      @apply text-4xl max-[1279px]:drop-shadow-[0_0.5px_1.5px_rgba(0,0,0,1)] max-[600px]:leading-5;
     }
     .xBg-cover {
       @apply max-[600px]:top-[15vh] max-[600px]:w-[650px] max-[600px]:h-[650px];

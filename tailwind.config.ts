@@ -40,6 +40,7 @@ const config: Config = {
       colors: {
         '5D-gray': '#858585',
         'x-color': '#FAA',
+        'white':'#FFF',
       },
 
     },
